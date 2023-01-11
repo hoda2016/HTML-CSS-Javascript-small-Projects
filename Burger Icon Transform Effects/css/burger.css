@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: cornflowerblue;
+}
+.menu-icon {
+    width: 70px;
+    height: 60px;
+    margin: 100px auto;
+    cursor: pointer;
+    position: relative;
+}
+.menu-icon span {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 10px;
+    /* left: 0; */
+    transition: all 1s linear;
+}
+.menu-icon span:first-child {
+    top: 0;
+}
+.menu-icon span:nth-child(2) {
+    top: 25px;
+}
+.menu-icon span:last-child {
+    top: 50px;
+}
+.menu-icon:hover span:nth-child(2) {
+    display: none;
+}
+.menu-icon:hover span:first-child,
+.menu-icon:hover span:last-child {
+    top: 25px;
+    background-color: red;
+}
+.menu-icon:hover span:first-child {
+    transform: rotate(45deg);
+}
+.menu-icon:hover span:last-child {
+    transform: rotate(-45deg);
+}

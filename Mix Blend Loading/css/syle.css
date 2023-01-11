@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: black;
+    font-family: "Cairo", sans-serif;
+}
+div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background-color: white;
+    animation: right 3s linear infinite;
+}
+div span {
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    line-height: 1;
+    mix-blend-mode: difference;
+}
+@keyframes right {
+    0%,
+    100% 
+    {
+        left: 0;
+    }
+    50% {
+        left: calc(100% - 100px);
+    }
+}
